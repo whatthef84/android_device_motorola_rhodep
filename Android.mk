@@ -1,4 +1,4 @@
-ifeq (rhodei,$(TARGET_DEVICE))
+ifeq (rhodep,$(TARGET_DEVICE))
 
 LOCAL_PATH := $(call my-dir)
 

@@ -17,13 +17,14 @@ PRODUCT_PLATFORM := holi
 include device/motorola/sm4350-common/PlatformConfig.mk
 
 # Bootloader Name
-TARGET_BOOTLOADER_BOARD_NAME := rhodei
+TARGET_BOOTLOADER_BOARD_NAME := rhodep
 
 # Modules
 BOARD_VENDOR_KERNEL_MODULES_LOAD := \
     sm5602_fg_mmi.ko \
     sgm4154x_charger.ko \
     bq2589x_charger.ko \
+    tcpc_rt1711h.ko \
     tcpc_sgm7220.ko \
     adsp_loader_dlkm.ko \
     apr_dlkm.ko \
@@ -42,8 +43,8 @@ BOARD_VENDOR_KERNEL_MODULES_LOAD := \
     q6_notifier_dlkm.ko \
     q6_pdr_dlkm.ko \
     qca_cld3_wlan.ko \
-    ili9882_mmi.ko \
-    nova_0flash_mmi.ko \
+    touchscreen_mmi.ko \
+    goodix_brl_mmi.ko \
     rx_macro_dlkm.ko \
     snd_event_dlkm.ko \
     stub_dlkm.ko \
@@ -57,6 +58,7 @@ BOARD_VENDOR_KERNEL_MODULES_LOAD := \
     wcd938x_slave_dlkm.ko \
     wcd9xxx_dlkm.ko \
     wcd_core_dlkm.ko \
+    wl2868c.ko \
     wlan.ko \
     wsa881x_analog_dlkm.ko \
     rt_pd_manager.ko
@@ -66,7 +68,10 @@ BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := \
     sgm4154x_charger.ko \
     bq2589x_charger.ko \
     tcpc_sgm7220.ko \
-    rt_pd_manager.ko
+    tcpc_rt1711h.ko \
+    rt_pd_manager.ko \
+    touchscreen_mmi.ko \
+    goodix_brl_mmi.ko
 
 # Partition information
 BOARD_SUPER_PARTITION_SIZE := 8613003264
