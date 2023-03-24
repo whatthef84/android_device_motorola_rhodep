@@ -18,7 +18,7 @@
 
 set -e
 
-DEVICE=osaka
+DEVICE=rhodei
 VENDOR=motorola
 
 # Load extract utilities and do some sanity checks.

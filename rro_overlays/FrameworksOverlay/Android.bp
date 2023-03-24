@@ -1,4 +1,4 @@
 runtime_resource_overlay {
-    name: "osakaFrameworksOverlay",
+    name: "rhodeiFrameworksOverlay",
     vendor: true,
 }

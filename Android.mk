@@ -1,4 +1,4 @@
-ifeq (osaka,$(TARGET_DEVICE))
+ifeq (rhodei,$(TARGET_DEVICE))
 
 LOCAL_PATH := $(call my-dir)
 

@@ -13,7 +13,7 @@
 # limitations under the License.
 
 # Device path
-DEVICE_PATH := device/motorola/osaka/rootdir
+DEVICE_PATH := device/motorola/rhodei/rootdir
 
 # AAPT
 PRODUCT_AAPT_CONFIG := normal
@@ -35,15 +35,28 @@ PRODUCT_PACKAGES += \
     fstab.qcom
 
 # Fingerprint
-TARGET_USES_CHIPONE_FINGERPRINT := true
-TARGET_USES_FPC_FINGERPRINT := true
+TARGET_USES_EGISTEC_FINGERPRINT := true
+TARGET_USES_FOCAL_FINGERPRINT := true
+
+# Modules
+BOOT_KERNEL_MODULES := \
+    sm5602_fg_mmi.ko \
+    sgm4154x_charger.ko \
+    bq2589x_charger.ko \
+    tcpc_sgm7220.ko \
+    rt_pd_manager.ko \
+    ili9882_mmi.ko \
+    nova_0flash_mmi.ko
+
+# Power
+TARGET_IS_BLAIR := true
 
 # Thermal
 PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/vendor/etc/thermal-engine-denver.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine-denver.conf
+    $(DEVICE_PATH)/vendor/etc/thermal-engine-rhodei.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine-rhodei.conf
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, device/motorola/sm4350-common/platform.mk)
 
 # include board vendor blobs
-$(call inherit-product-if-exists, vendor/motorola/osaka/osaka-vendor.mk)
+$(call inherit-product-if-exists, vendor/motorola/rhodei/rhodei-vendor.mk)

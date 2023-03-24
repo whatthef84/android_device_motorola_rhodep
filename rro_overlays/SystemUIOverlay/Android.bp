@@ -1,4 +1,4 @@
 runtime_resource_overlay {
-    name: "osakaSystemUIOverlay",
+    name: "rhodeiSystemUIOverlay",
     vendor: true,
 }
